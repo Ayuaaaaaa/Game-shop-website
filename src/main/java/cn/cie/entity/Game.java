@@ -119,4 +119,6 @@ public class Game {
     public void setStat(Byte stat) {
         this.stat = stat;
     }
+
+
 }

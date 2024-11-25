@@ -1,4 +1,4 @@
-var url;
+var url = '/kind/all';
 $(
     function () {
         getgame(1);
@@ -11,6 +11,8 @@ function getgame(page) {
     ul.innerHTML = "";
     ull.innerHTML = "";
     $.post(url, {page: page}, function (result) {
+        console.log(1111)
+        console.log(result)
         if(result.data){
             var i = 0;
             var j = 0;

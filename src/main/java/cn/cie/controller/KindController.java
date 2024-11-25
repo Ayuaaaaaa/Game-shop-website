@@ -30,6 +30,7 @@ public class KindController extends AbstractController {
     @GetMapping(value = "{kind}/games")
     public String getGames(@PathVariable(value = "kind") Integer kind) {
         String name = kindService.getNameById(kind);
+        System.out.println("进入kindController");
         if (name == null) {
             throw new NotFoundException();
         }

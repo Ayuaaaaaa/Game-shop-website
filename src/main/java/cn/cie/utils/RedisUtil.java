@@ -326,6 +326,9 @@ public class RedisUtil<T> implements InitializingBean {
      * @throws Exception
      */
     public void afterPropertiesSet() throws Exception {
+        System.out.println("创建Redis连接");
         jedisPool = new JedisPool(REDIS_URL);
+        System.out.println("jedisPool:"+jedisPool.toString());
+        System.out.println("创建Redis连接成功");
     }
 }

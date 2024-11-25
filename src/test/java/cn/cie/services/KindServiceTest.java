@@ -16,7 +16,7 @@ import java.util.List;
  * Created by lh2 on 2023/6/10.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(value = {"classpath:spring-dao.xml", "classpath:spring-service.xml"})
+@ContextConfiguration(value  = {"classpath:spring-dao.xml", "classpath:spring-service.xml"})
 public class KindServiceTest {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());

@@ -23,7 +23,9 @@ public class RedisUtilTest {
 
     @Test
     public void put() throws Exception {
-        logger.info(redis.put("key", "value"));
+        System.out.println(redis.put("key", "value"));
+        System.out.println(redis.get("key"));
+        //logger.info(redis.put("key", "value"));
     }
 
     @Test
@@ -33,8 +35,12 @@ public class RedisUtilTest {
 
     @Test
     public void get() throws Exception {
-        logger.info(redis.get("key"));
-        logger.info(redis.get("ex"));
+        System.out.println(redis.putEx("ex", "exvalue", 5));
+        System.out.println(redis.get("ex"));
+        Thread.sleep(5000);
+        System.out.println(redis.get("ex"));
+        //     logger.info(redis.get("key"));
+     //   logger.info(redis.get("ex"));
 //        logger.info(redis.get("kinds"));
     }
 

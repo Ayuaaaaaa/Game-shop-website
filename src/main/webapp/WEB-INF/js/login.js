@@ -4,6 +4,7 @@ function login() {
     var remember = document.getElementById("remember").checked;
     $.post("/login", {username: name, password: password, remember: remember},
         function (result) {
+            console.log("返回结果了")
             if (result.success) {
                 window.location.href = result.data.referer;
             }

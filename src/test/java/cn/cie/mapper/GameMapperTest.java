@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 /**
  * Created by lh2 on 2023/6/14.
  */
@@ -23,7 +25,11 @@ public class GameMapperTest {
 
     @Test
     public void selectByStat() throws Exception {
-        logger.info("games={}" + gameMapper.selectByStat(Game.STAT_OK));
+        //logger.info("games={}" + gameMapper.selectByStat(Game.STAT_OK));
+        List<Game> gameList = gameMapper.selectByStat(Game.STAT_OK);
+        for (Game game:gameList) {
+            System.out.println(game.getName());
+        }
 
     }
 

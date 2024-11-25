@@ -57,6 +57,8 @@ public class KindServiceImpl implements KindService {
     }
 
     public Result<List<GameDTO>> getGamesByKind(int kind, int page) {
+        System.out.println("进入kindService");
+
         if (kindMapper.selectById(kind) == null) {
             return Result.fail(MsgCenter.NOT_FOUND);
         }

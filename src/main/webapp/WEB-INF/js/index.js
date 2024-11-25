@@ -1,7 +1,9 @@
 $(
     function () {
         var j = 1;
+        console.log('everyday');
         $.post("/everyday", function (result) {
+            console.log(result);
             for (i = 0; i < 5; i++) {
                 document.getElementById("gameurl_" + i).href = "/game/" + result.data[i].id;
                 document.getElementById("gameimg_" + i).src = "/img" + result.data[i].img[0];
@@ -10,6 +12,8 @@ $(
         })
         var myTabContent = document.getElementById("myTabContent");
         $.post("/newestgames", function (result) {
+            console.log(newestgames)
+            console.log(result)
             var i = 0;
             var div = document.createElement("div");
             div.className = "tab-pane fade in active";
